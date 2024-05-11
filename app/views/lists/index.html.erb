@@ -1,0 +1,9 @@
+<h1>My Lists 🚀</h1>
+<!-- app/views/lists/index.html.erb -->
+<ul>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ul>
+<%= link_to '+ Add new list', new_list_path(@list) %>
+<%= link_to 'Back to lists', lists_path() %>
